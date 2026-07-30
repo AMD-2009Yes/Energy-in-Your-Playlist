@@ -1,0 +1,53 @@
+/* feature-element  */
+
+.feature-card {
+  transition: 0.3s;
+}
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+}
+
+/* ! feature-element ! */
+
+/* starting animation */
+.mini-fly {
+  animation: mini-fly 2s infinite;
+}
+@keyframes mini-fly {
+  0%,100% {transform: translateY(-5px);}
+  50% {transform: translateY(-5px);}
+}
+
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.2s ease-out, transform 0.2s ease-out;
+}
+
+.animate-on-scroll.animate-fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.animate-fade-in {
+  animation: fadeIn 1s ease-in;
+}
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+/* ! starting animation ! */
+
+/* constant animation */
+
+.animate-bounce {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%,100% {transform: translateY(0);}
+  50% {transform: translateY(-6px);}
+}
+/* ! constant animation ! */
